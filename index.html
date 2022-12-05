@@ -7,20 +7,75 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./styles.css" />
+    <!-- <script
+      src="https://kit.fontawesome.com/54f63df7b4.js"
+      crossorigin="anonymous"
+    ></script> -->
+
     <script src="./scripts.js" defer></script>
   </head>
   <body>
     <div class="container">
-      <div class="header"></div>
-      <div class="dashboard">
-        <h1>Dashboard</h1>
+      <div class="header">
+        <div class="search-box">
+          <form action="#" method="GET">
+            <div class="form-item">
+              <!-- how to hide label and be accessible? -->
+              <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+              <label for="search"></label>
+              <input id="search" name="search" type="search" />
+            </div>
+          </form>
+        </div>
+        <div class="profile-items">
+          <div class="profile-item" id="profile-item-one">
+            <img src="./ringing-bell.png" class="icon" />
+          </div>
+          <div class="profile-item" id="profile-item-two">
+            <img src="./duck-face.png" class="profile-pic" />
+          </div>
+          <div class="profile-item" id="profile-item-three">
+            <p class="profile-name">Doug Cooper</p>
+          </div>
+        </div>
       </div>
-      <!-- <div class="nav">Nav</div> -->
+      <div class="dashboard">
+        <h2>Dashboard</h2>
+        <ul>
+          <!-- this seems like a cheap hack>>>> -->
+          <li></li>
+          <li>Home</li>
+          <li>Profile</li>
+          <li>Messages</li>
+          <li>History</li>
+          <li>Tasks</li>
+          <li>Communities</li>
+          <!-- this seems like a cheap hack>>>> -->
+          <li></li>
+          <li>Settings</li>
+          <li>Support</li>
+          <li>Privacy</li>
+        </ul>
+      </div>
+      <div class="nav">
+        <div class="big-pic">
+          <img src="./duck-face.png" class="big-img" />
+        </div>
+        <div class="welcome-text">
+          <p class="greeting">Hi there,</p>
+          <p class="my-name">Doug Cooper (@doug)</p>
+        </div>
+        <div class="site-buttons">
+          <button class="new">New</button>
+          <button class="upload">Upload</button>
+          <button class="share">Share</button>
+        </div>
+      </div>
       <div class="board-page">
-        <div class="project-container">
-          <h2>Your Projects</h2>
+        <div class="project-container" id="no-side-padding">
+          <h3>Your Projects</h3>
           <div class="project">
-            <h3>Cool Project</h3>
+            <h4>Cool Project</h4>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -33,7 +88,7 @@
             </div>
           </div>
           <div class="project">
-            <h3>Another Cool Project</h3>
+            <h4>Another Cool Project</h4>
             <p>
               Pellentesque habitant morbi tristique senectus et netus et
               malesuada fames ac turpis egestas. Curabitur bibendum turpis quis
@@ -46,7 +101,7 @@
             </div>
           </div>
           <div class="project">
-            <h3>Really great app</h3>
+            <h4>Really great app</h4>
             <p>
               Pellentesque habitant morbi tristique senectus et netus et
               malesuada fames ac turpis egestas. Curabitur bibendum turpis quis
@@ -59,7 +114,7 @@
             </div>
           </div>
           <div class="project">
-            <h3>Some idea I had</h3>
+            <h4>Some idea I had</h4>
             <p>
               Pellentesque habitant morbi tristique senectus et netus et
               malesuada fames ac turpis egestas. Curabitur bibendum turpis quis
@@ -72,7 +127,7 @@
             </div>
           </div>
           <div class="project">
-            <h3>Something that makes money</h3>
+            <h4>Something that makes money</h4>
             <p>
               Pellentesque habitant morbi tristique senectus et netus et
               malesuada fames ac turpis egestas. Curabitur bibendum turpis quis
@@ -85,7 +140,7 @@
             </div>
           </div>
           <div class="project">
-            <h3>A browser extension</h3>
+            <h4>A browser extension</h4>
             <p>
               Pellentesque habitant morbi tristique senectus et netus et
               malesuada fames ac turpis egestas. Curabitur bibendum turpis quis
@@ -99,25 +154,25 @@
           </div>
         </div>
         <div class="announcement-container">
-          <h2>Announcements</h2>
-          <div class="announcement">
-            <h4>Holiday</h4>
+          <h3>Announcements</h3>
+          <div class="announcement" id="ann-one">
+            <h5>Holiday</h5>
             <p>
               Pellentesque habitant morbi tristique senectus et netus et
               malesuada fames ac turpis egestas. Curabitur bibendum turpis quis
               interdum semper.
             </p>
           </div>
-          <div class="announcement">
-            <h4>Meeting at that time</h4>
+          <div class="announcement" id="ann-two">
+            <h5>Meeting at that time</h5>
             <p>
               Pellentesque habitant morbi tristique senectus et netus et
               malesuada fames ac turpis egestas. Curabitur bibendum turpis quis
               interdum semper.
             </p>
           </div>
-          <div class="announcement">
-            <h4>Lunch at then</h4>
+          <div class="announcement" id="ann-three">
+            <h5>Lunch at then</h5>
             <p>
               Pellentesque habitant morbi tristique senectus et netus et
               malesuada fames ac turpis egestas. Curabitur bibendum turpis quis
@@ -126,33 +181,33 @@
           </div>
         </div>
         <div class="message-container">
-          <h2>Trending</h2>
-          <div class="message">
-            <div class="avatars">
+          <h3>Trending</h3>
+          <div class="message" id="message-one">
+            <div class="profile-pics">
               <img src="./bowler-man.png" class="profile-pic" />
             </div>
-            <p class="handle">@Kendall</p>
+            <p class="handle">@kendall</p>
             <p>Check it out</p>
           </div>
-          <div class="message">
-            <div class="avatars">
+          <div class="message" id="message-two">
+            <div class="profile-pics">
               <img src="./duck-face.png" class="profile-pic" />
             </div>
-            <p class="handle">@Doug</p>
+            <p class="handle">@doug</p>
             <p>That thing there</p>
           </div>
-          <div class="message">
-            <div class="avatars">
+          <div class="message" id="message-three">
+            <div class="profile-pics">
               <img src="./otter-beard.png" class="profile-pic" />
             </div>
-            <p class="handle">@Billy</p>
+            <p class="handle">@billy</p>
             <p>Lunch at then</p>
           </div>
-          <div class="message">
-            <div class="avatars">
+          <div class="message" id="message-four">
+            <div class="profile-pics">
               <img src="./peacock.png" class="profile-pic" />
             </div>
-            <p class="handle">@Joseph</p>
+            <p class="handle">@joseph</p>
             <p>Cool app</p>
           </div>
         </div>
